@@ -2,12 +2,28 @@ clc
 clear
 close all
 
-N = 55;
-L = 20;
-p = 10;
+N = 120;
+L = 45;
+p = 15;
 
 x = ones(N,1);
 h = ones(p,1);
 
-x0 = zeros(N+p-1,1);
-x0(p:end) = x;
+x1 = zeros(N+p-1,1);
+x1(p:end) = x;
+
+Ns = floor(N/L);
+Yc = zeros(L-p+1,1);
+
+yf=[];
+for j = 1:Ns
+ for i = 1:L
+     Xs(i) = x1(i+L*(j-1)); 
+
+ end
+ ys=conv(Xs,h);
+ for i =1:L+P-1;
+    X2(j,i+(j-1)*L) = ys;
+ end
+yf = sum(X) 
+stem(yf(1:35))
