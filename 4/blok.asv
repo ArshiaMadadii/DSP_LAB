@@ -1,0 +1,13 @@
+clc
+clear
+close all
+
+N = 55;
+L = 20;
+p = 10;
+
+x = ones(N,1);
+h = ones(p,1);
+
+x0 = zeros(N+p-1,1);
+x0(p:end) = x;
