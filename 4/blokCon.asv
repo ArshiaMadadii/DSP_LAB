@@ -1,0 +1,11 @@
+clear;
+clc;
+close all
+
+N = 1000;
+L = 15;
+p = 10;
+x = ones(N,1);
+h = ones(p,1);
+X = FFT(x,N);
+H = FFT(h,N);
